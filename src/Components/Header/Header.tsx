@@ -12,10 +12,8 @@ const StyledHeader = styled.div `
   left: 0;
   width: 100%;
   z-index: 100;
-
-  @media(max-width:900){
-    height: 60px
-  }
+  height: 60px;
+  font-family: "Anton",sans-serif;
 `
 
 const StyledHeaderInner = styled.div`
@@ -144,6 +142,8 @@ const StyledHeaderUl = styled.ul`
 `
 
 const StyledHeaderLi = styled.li`
+  font-size: 1vw;
+  letter-spacing: 0.1vw;
   color: #fffb00;
   margin-left: 2vw;
   margin-right: 2vw;
@@ -174,10 +174,10 @@ export function Header () {
           </StyledHumbergerWrapper>
             <nav css={[StyledHeaderNav , open && isShow]}>
               <StyledHeaderUl>
-                <StyledHeaderLi><Link to="/"></Link>Characters</StyledHeaderLi>
-                <StyledHeaderLi><Link to="/"></Link>FramesVS</StyledHeaderLi>
-                <StyledHeaderLi><Link to="/"></Link>Tier</StyledHeaderLi>
-                <StyledHeaderLi><Link to="/"></Link>Tips</StyledHeaderLi>
+                <StyledHeaderLi><Link to="/characters">Characters</Link></StyledHeaderLi>
+                <StyledHeaderLi><Link to="/framesvs">FramesVS</Link></StyledHeaderLi>
+                <StyledHeaderLi><Link to="/tier">Tier</Link></StyledHeaderLi>
+                <StyledHeaderLi><Link to="/tips">Tips</Link></StyledHeaderLi>
               </StyledHeaderUl>
             </nav>
         </StyledHeaderContent>
